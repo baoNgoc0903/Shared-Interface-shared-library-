@@ -2,6 +2,10 @@ QT -= gui
 
 TEMPLATE = lib
 DEFINES += LOVEWIDGETPLUGIN_LIBRARY
+include(../common.pri)
+qmlfiles.files = $$PWD/qml
+qmlfiles.path = /app/plugins/AssistantWindow
+INSTALLS += qmlfiles
 
 CONFIG += c++11
 TARGET = LoveWidgetPlugin

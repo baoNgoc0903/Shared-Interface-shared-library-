@@ -1,5 +1,5 @@
 QT += quick
-
+TEMPLATE = app
 CONFIG += c++11
 
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -10,7 +10,10 @@ SOURCES += \
         main.cpp \
         widgetplugin.cpp
 
-RESOURCES += qml.qrc
+# must have three line below
+qmlfiles.files = $$PWD/qml
+qmlfiles.path = /app/plugins/AssistantWindow
+INSTALLS += qmlfiles
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
